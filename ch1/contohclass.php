@@ -3,8 +3,15 @@ class Mahasiswa{
 
 }
 
-$variableMhs = get_declared_classes();
+$namaClasses = ['Mahasiswa', 'Dosen', 'mahasiswa'];
 
-echo "Classes : " . implode(',', $variableMhs) . "< \br>";
+foreach($namaClasses as $namaClass){
+    if(class_exists($namaClass)){
+            echo $namaClass . " class ada <br/>";
+    }
+    else{
+        echo $namaClass . " class tidak ada <br/>";
+    }
+}
 
 ?>
